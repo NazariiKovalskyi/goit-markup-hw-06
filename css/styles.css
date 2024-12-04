@@ -257,9 +257,11 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.mobile-menu-nav {
+.menu-nav {
     margin-bottom: auto;
+}
+.mobile-menu-nav {
+    
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -403,7 +405,7 @@ color: #2e2f42;
 }
 
 @media only screen and (min-width: 768px) and (min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+       only screen and (min-width: 768px) and(min-resolution: 2dppx) {
     .solutions {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/solutions/Dark-bg_tab@2x.jpg);
@@ -425,7 +427,7 @@ color: #2e2f42;
 
 }
 @media only screen and (min-width: 1158px) and (min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+       only screen and (min-width: 1158px) and (min-resolution: 2dppx) {
     .solutions {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/solutions/people-office\ 1_desc@2x.jpg);
@@ -466,11 +468,11 @@ color: #2e2f42;
  }
  @media only screen and (min-width: 768px) {
 .advantages-list{
-    gap: 24px;
+    row-gap: 72px;
+    column-gap: 24px;
 }
 .advantages-item {
 width: calc((100% - 24px * 1) / 2);
-padding-bottom: 72px;
 }
 .advantages-header {
    text-align: left;
@@ -590,7 +592,8 @@ width: calc((100% - 72px) / 4);
 .list-team {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    row-gap: 64px;
+    column-gap: 24px;
     }
 }
 @media only screen and (min-width: 1158px) {
@@ -712,6 +715,9 @@ row-gap: 48px;
 }
 
                      /* Footer */
+.footer-box {
+    margin-bottom: 72px
+}
 .footer-container {
     display: flex;
     flex-direction: column;
@@ -736,7 +742,7 @@ row-gap: 48px;
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
-    margin-bottom: 72px;
+    
 }
 .logo-footer {
     display: flex;
@@ -828,7 +834,8 @@ row-gap: 48px;
     border: none;
     border-radius: 4px;
     margin-top: 16px;
-    margin-left: 61px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 .footer-input-icon {
@@ -836,16 +843,21 @@ row-gap: 48px;
     fill: #fff;
 }
 @media only screen and (min-width: 768px) {
+.footer-box {
+    margin-bottom: 0;
+}
 .footer-container {
     flex-direction: row;
     padding-left: 108px;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
  }
 .logo-footer, .footer-input-text  {
 justify-content: start;
  }
 .social-media-footer {
     align-items: flex-start;
+    margin-bottom: 0;
 }
 .footer-input-email {
     width: 264px;
